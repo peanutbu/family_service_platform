@@ -1,0 +1,23 @@
+#???????
+server:
+  port: 8080
+#  ???????????????? springboot???????????
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/family_service_platform?serverTimeZone=UTC&useSSL=true
+    password: ljt
+    username: root
+#    ??mybatis
+mybatis:
+  mapper-locations: classpath:com/msb/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+#    sql??????
+logging:
+  level:
+    com:
+      msb:
+        mapper:
+          debug
+
